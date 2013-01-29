@@ -1,26 +1,26 @@
 package
 {
-    import flash.display.Sprite;
-    import flash.events.Event;
-    import flash.events.MouseEvent;
-    import flash.text.TextField;
-import flash.text.TextFormat;
+	import flash.display.Sprite;
+	import flash.display.StageAlign;
+	import flash.events.Event;
+	import flash.events.MouseEvent;
+	import flash.text.TextField;
+	import flash.text.TextFormat;
 
-public class Buttons extends Sprite
+	public class Buttons extends Sprite
     {
         public function Buttons()
         {
             var textFormat:TextFormat = new TextFormat();
             textFormat.size = 16;
 
-            var oakwoodBuses:TextField = new TextField();
-            oakwoodBuses.text = "Oakwood Buses";
-            oakwoodBuses.setTextFormat(textFormat);
+	        var oakwoodBuses:Button = new Button("Oakwood Buses");
+	        oakwoodBuses.x = 50;
+	        oakwoodBuses.y = 50;
 
-            var cornExBuses:TextField = new TextField();
-            cornExBuses.text = "Corn Ex Busses";
-            cornExBuses.setTextFormat(textFormat);
-            cornExBuses.y = 50;
+	        var cornExBuses:Button = new Button("Corn Ex Buses");
+	        cornExBuses.x = 50 + oakwoodBuses.width + 20;
+	        cornExBuses.y = 50;
 
             var reload:TextField = new TextField();
             reload.text = "Reload";

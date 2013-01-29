@@ -1,7 +1,8 @@
 package {
 
 import flash.display.Sprite;
-import flash.events.Event;
+	import flash.display.StageAlign;
+	import flash.events.Event;
 import flash.geom.Rectangle;
 import flash.media.StageWebView;
 import flash.net.URLRequest;
@@ -14,6 +15,8 @@ public class WYMetro extends Sprite
 
         public function WYMetro()
         {
+	        stage.align = StageAlign.TOP_LEFT;
+
             var buttons:Buttons = new Buttons();
 
             buttons.addEventListener("showOakwoodBuses", function(e:Event) : void {
@@ -47,7 +50,7 @@ public class WYMetro extends Sprite
         public function StageWebViewExample(url:String) : void
         {
             webView.stage = this.stage;
-            webView.viewPort = new Rectangle( 0, 100, stage.stageWidth, stage.stageHeight );
+            webView.viewPort = new Rectangle(0, 110, stage.stageWidth, stage.stageHeight );
             webView.loadURL(url);
         }
     }
